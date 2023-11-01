@@ -51,25 +51,8 @@ async function paginateUsers(params, users = []) {
 		const emailVerified = user.Attributes.find(attr => attr.Name === 'email_verified');
 
 		return {
-			name: '',
-			given_name: '',
-			family_name: '',
-			middle_name: '',
-			nickname: '',
-			preferred_username: '',
-			profile: '',
-			picture: '',
-			website: '',
 			email: emailAttribute ? emailAttribute.Value : '',
 			email_verified: emailVerified ? emailVerified.Value : false,
-			gender: '',
-			birthdate: '',
-			zoneinfo: '',
-			locale: '',
-			phone_number: '',
-			phone_number_verified: '',
-			address: '',
-			updated_at: '',
 
 			// カスタム属性等があれば追加
 		};
